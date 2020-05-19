@@ -46,8 +46,15 @@ mod tests {
     }
 
     #[test]
-    fn it_works_with_vars() {
+    fn it_works_with_stringss() {
         let name = "richard".to_string();
+        let s: String = string_concat!("hello ", name, "!");
+        assert_eq!(s, "hello richard!");
+    }
+
+    #[test]
+    fn it_works_with_str() {
+        let name = "richard";
         let s: String = string_concat!("hello ", name, "!");
         assert_eq!(s, "hello richard!");
     }
