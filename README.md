@@ -4,5 +4,18 @@ A useful macro for putting together strings in a low overhead manner for `no_std
 
 ```
 let name = "Richard";
-let msg = string_concat!("Hello ",name,"!");
+let msg:String = string_concat!("Hello ",name,"!");
+```
+
+saves you from typing
+
+```
+let name = "Richard";
+let msg:String = {
+  let temp_string = String::new();
+  temp_string.push_str("Hello");
+  temp_string.push_str(name);
+  temp_string.push_str("!");
+  temp_string
+}
 ```
