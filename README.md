@@ -19,3 +19,8 @@ let msg:String = {
   temp_string
 }
 ```
+
+# Contributors
+
+* @richardanaya
+* @RustyYato
